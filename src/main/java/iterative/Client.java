@@ -17,7 +17,7 @@ class Client {
 			6789: server service port number */
         Socket clientSocket = new Socket("localhost", 6789);
 
-        System.out.println("\n CLIENT STARTS");
+        System.out.println("\n CLIENT STARTS TEST");
 
         // output stream towards socket initialization
         DataOutputStream outToServer =
