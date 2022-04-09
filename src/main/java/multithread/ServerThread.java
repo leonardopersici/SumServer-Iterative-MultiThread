@@ -41,7 +41,7 @@ public class ServerThread extends Thread {
             clientY = parseInt(splitted[1]);
 
             // wait for 10 seconds
-            //Thread.sleep(10000);
+            Thread.sleep(10000);
 
             sumClient = clientX + clientY;
 
@@ -49,7 +49,7 @@ public class ServerThread extends Thread {
             outToClient.writeBytes(Integer.toString(sumClient) + '\n');
 
             connectionSocket.close();
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
     }

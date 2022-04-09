@@ -2,7 +2,7 @@ multithread/MultiServer.java
  multithread.MultiServer
 iterative/Client.java
  iterative.Client
-multithread/ServerThread.java
- multithread.ServerThread
 iterative/IterativeServer.java
  iterative.IterativeServer
+multithread/ServerThread.java
+ multithread.ServerThread
