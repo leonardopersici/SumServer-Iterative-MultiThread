@@ -1,4 +1,4 @@
-# Lab1 Examples
+# Client - Server structure for sum operation
 
 * Iterative Server
 
