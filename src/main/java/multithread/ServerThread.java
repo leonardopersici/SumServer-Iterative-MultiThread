@@ -9,8 +9,6 @@ public class ServerThread extends Thread {
     private Socket connectionSocket = null;
     private BufferedReader inFromClient;
     private DataOutputStream outToClient;
-    int clientX;
-    int clientY;
     int sumClient;
 
     // the constructor argument is an established socket
@@ -37,13 +35,11 @@ public class ServerThread extends Thread {
 
             // read a line (that terminates with \n) from the client
             String[] splitted = inFromClient.readLine().split("\\s+");
-            clientX = parseInt(splitted[0]);
-            clientY = parseInt(splitted[1]);
 
             // wait for 10 seconds
             Thread.sleep(10000);
 
-            sumClient = clientX + clientY;
+            sumClient = parseInt(splitted[0]) + parseInt(splitted[1]);
 
             // send the response to the client
             outToClient.writeBytes(Integer.toString(sumClient) + '\n');
